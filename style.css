@@ -1,0 +1,182 @@
+/* General */
+
+:root{
+    --white: #FEFEFE;
+    --blue: #0d16c5;
+    --black: #1B1B1B;
+    --gray: #DEDEDE;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* Index */
+
+.site-init{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.site-init h1{
+    font-weight: 300;
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 15rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 2rem;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+select{
+    width: 16.5rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 2rem;
+    color: #747474;
+}
+
+option{
+    color: #000;
+}
+
+option:first-child{
+    color: #747474;
+}
+
+input:first-of-type{
+    margin-top: 2rem;;
+}
+
+button{
+    padding: 0.5rem 3rem;
+    background-color: var(--blue);
+    color: var(--white);
+    border: transparent;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.login-container button{
+    margin-top: 1rem;
+}
+
+/* Register */
+
+.site-register{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.site-register h1{
+    font-weight: 300;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--blue);
+}
+
+.form-container-title{
+    margin-left: 3.5rem;
+}
+
+.form-container-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container-one, .form-container-two{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+.container-title{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+
+.container-title i{
+    margin-right: 1rem;
+}
+
+.form-container-img{
+    background-image: url(img/registering.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 20rem;
+    height: 30rem;
+}
+
+.overlay{
+    background-color: #0d16c5b8;
+    width: 20rem;
+    height: 30rem;
+}
+
+/* Footer */
+
+footer{
+    height: 10vh;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text{
+    color: var(--blue);
+}
