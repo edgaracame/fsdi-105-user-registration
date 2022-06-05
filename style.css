@@ -48,6 +48,14 @@ nav a{
     margin-right: 2rem;
 }
 
+nav a:hover{
+    color: var(--white);
+    margin-right: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
 .login-container{
     display: flex;
     flex-direction: column;
@@ -157,14 +165,50 @@ button{
     background-image: url(img/registering.jpg);
     background-size: cover;
     background-position: center;
-    width: 20rem;
+    width: 25rem;
     height: 30rem;
 }
 
 .overlay{
     background-color: #0d16c5b8;
-    width: 20rem;
+    width: 25rem;
     height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container-img p{
+    padding: 0 3rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.form-container-img button{
+    padding: 0.5rem 3rem;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.form-container-img button:hover{
+    padding: 0.5rem 3rem;
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--white);
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.input-error{
+    border: 1px solid red;
 }
 
 /* Footer */

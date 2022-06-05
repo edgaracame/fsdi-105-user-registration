@@ -11,6 +11,34 @@ function User(email, password, fname, lname, age, address, phone, payment, color
     this.color = color;
 }
 
+    //Validation
+function isValid(user){
+    let valid = true;
+
+    if(user.email.length == 0){
+        valid = false;
+        console.log("Please add an email");
+        $("#txtEmail").addClass("input-error");
+    }
+    if(user.password.length == 0){
+        valid = false;
+        console.log("Please add a password");
+        $("#txtPassword").addClass("input-error");
+    }
+    if(user.fname.length == 0){
+        valid = false;
+        console.log("Please add a first name");
+        $("#txtFirstName").addClass("input-error");
+    }
+    if(user.lname.length == 0){
+        valid = false;
+        console.log("Please add a last name");
+        $("#txtLastName").addClass("input-error");
+    }
+
+    return valid;
+}
+
     //Register Function
 function register(){
     let userName = $("#txtEmail").val();
@@ -25,13 +53,20 @@ function register(){
 
     let newUser = new User(userName, userPass, userFirstName, userLastName, userAge, userAddress, userPhone, userPayment, userColor);
 
-    console.log(newUser);
+    if(isValid(newUser) == true){
+        saveUser(newUser);
 
-    $("input").val("");
-    $("select").val("");
+        $("input").val("");
+        $("select").val("");
+    }
 }
 
 function init(){
     $("#btnRegister").click(register);
+    $("#txtPhone").keypress(function(e){
+        if(e.key == "Enter"){
+            register();
+        }
+    });
 }
 window.onload = init;

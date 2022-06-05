@@ -14,8 +14,9 @@
         <h1>My Awesome User Registration System</h1>
 
         <nav>
-            <a href="index.html">Home</a>
+            <a id="link-style" href="index.html">Home</a>
             <a href="register.html">Register</a>
+            <a href="users.html">Users</a>
         </nav>
     </header> 
     
@@ -37,7 +38,6 @@
         
                     <div class="form-container-two">
                         <input type="text" id="txtAddress" placeholder="Enter your address">
-                        <input type="text" id="txtPhone" placeholder="Enter your phone number">
                         <select name="payment" id="txtPayment">
                             <option value="" disabled selected>Select your payment method</option>
                             <option value="Credit Card">Credit Card</option>
@@ -50,6 +50,7 @@
                             <option value="Red">Red</option>
                             <option value="Yellow">Yellow</option>
                         </select>
+                        <input type="text" id="txtPhone" placeholder="Enter your phone number">
             
                         <button id="btnRegister">Register</button>
                     </div>
@@ -57,7 +58,10 @@
             </div>
 
             <div class="form-container-img">
-                <div class="overlay"></div>
+                <div class="overlay">
+                    <p>Do you want to see the registered users?</p>
+                    <button onclick="window.location.href='users.html';">Users</button>
+                </div>
             </div>
         </div>
     </main>
@@ -66,8 +70,8 @@
         <p class="footer-text">&copy; Castillo Edgar 2022</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js
-    "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/storeManager.js"></script>
     <script src="scripts/app.js"></script>
 </body>
 </html>
