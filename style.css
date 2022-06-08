@@ -4,7 +4,7 @@
     --white: #FEFEFE;
     --blue: #0d16c5;
     --black: #1B1B1B;
-    --gray: #DEDEDE;
+    --gray: #747474;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
@@ -71,10 +71,6 @@ input{
     border-radius: 2rem;
 }
 
-input[type=number]{
-    -moz-appearance: textfield;
-}
-
 select{
     width: 16.5rem;
     padding: 10px;
@@ -82,7 +78,7 @@ select{
     background-color: transparent;
     border: 1px solid var(--gray);
     border-radius: 2rem;
-    color: #747474;
+    color: var(--gray);
 }
 
 option{
@@ -90,11 +86,17 @@ option{
 }
 
 option:first-child{
-    color: #747474;
+    color: var(--gray);
 }
 
 input:first-of-type{
     margin-top: 2rem;;
+}
+
+#txtColor{
+    width: 16.5rem;
+    height: 2.5rem;
+    background-color: transparent;
 }
 
 button{
@@ -209,6 +211,35 @@ button{
 
 .input-error{
     border: 1px solid red;
+}
+
+/* Users */
+
+table{
+    width: 50%;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: var(--white);
+    color: white;
+    box-shadow: 0 0 15px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+th, td{
+    padding: 0.5rem;
+}
+
+th{
+    background-color: var(--blue);
+}
+
+td{
+    color: var(--blue);
+}
+
+tr:hover{
+    background-color: #f3f3f3;
 }
 
 /* Footer */
