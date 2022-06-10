@@ -17,26 +17,61 @@ function isValid(user){
 
     if(user.email.length == 0){
         valid = false;
-        console.log("Please add an email");
         $("#txtEmail").addClass("input-error");
+        setTimeout(function(){
+            $("#txtEmail").removeClass("input-error");
+        }, 3000);
     }
     if(user.password.length == 0){
         valid = false;
-        console.log("Please add a password");
         $("#txtPassword").addClass("input-error");
+        setTimeout(function(){
+            $("#txtPassword").removeClass("input-error");
+        }, 3000);
     }
     if(user.fname.length == 0){
         valid = false;
-        console.log("Please add a first name");
         $("#txtFirstName").addClass("input-error");
+        setTimeout(function(){
+            $("#txtFirstName").removeClass("input-error");
+        }, 3000);
     }
     if(user.lname.length == 0){
         valid = false;
-        console.log("Please add a last name");
         $("#txtLastName").addClass("input-error");
+        setTimeout(function(){
+            $("#txtLastName").removeClass("input-error");
+        }, 3000);
     }
 
     return valid;
+}
+
+    //Password
+function validatePass(){
+    let txtPassword = $("#txtPassword");
+    let password = txtPassword.val();
+
+    if(password.length < 6){
+        txtPassword.css("background", "#ff7777");
+        displayError("The password is too short!");
+    }
+    else{
+        txtPassword.css("background", "var(--white)");
+        hideError();
+    }
+}
+
+    //Error
+function displayError(msg){
+    $("#alertError").removeClass("hide").text(msg);
+    setTimeout(function(){
+        $("#alertError").addClass("hide");
+    }, 3000);
+}
+
+function hideError(){
+    $("#alertError").addClass("hide");
 }
 
     //Register Function
@@ -55,9 +90,13 @@ function register(){
 
     if(isValid(newUser) == true){
         saveUser(newUser);
+        hideError();
 
         $("input").val("");
         $("select").val("");
+    }
+    else{
+        displayError("Please, complete all the fields!");
     }
 }
 
@@ -68,5 +107,6 @@ function init(){
             register();
         }
     });
+    $("#txtPassword").keyup(validatePass);
 }
 window.onload = init;

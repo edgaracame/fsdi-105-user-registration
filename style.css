@@ -46,13 +46,15 @@ nav a{
     color: var(--white);
     text-decoration: none;
     margin-right: 2rem;
+    background: linear-gradient(to left, var(--blue) 50%, var(--white) 50%) right;
+    background-size: 250%;
+    transition: .25s ease-out;
+    padding: 0.2rem;
 }
 
 nav a:hover{
-    color: var(--white);
-    margin-right: 2rem;
-    font-weight: bold;
-    text-decoration: underline;
+    background-position: 0 150%;
+    color: var(--blue);
 }
 
 
@@ -111,6 +113,30 @@ button{
 
 .login-container button{
     margin-top: 1rem;
+}
+
+.login-error{
+    font-size: 0.8rem;
+    color: var(--white);
+    background-color: red;
+    padding: 0 1rem;
+}
+
+.not-user{
+    font-size: 0.8rem;
+    color: var(--blue);
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to left, var(--white) 50%, var(--blue) 50%) right;
+    background-size: 250%;
+    transition: .35s ease-out;
+    padding: 0 1rem;
+}
+
+.not-user:hover{
+    background-position: 0 150%;
+    color: var(--white);
 }
 
 /* Register */
@@ -211,6 +237,18 @@ button{
 
 .input-error{
     border: 1px solid red;
+}
+
+.alert-error{
+    font-size: 0.8rem;
+    color: var(--white);
+    background-color: red;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.hide{
+    display: none;
 }
 
 /* Users */
